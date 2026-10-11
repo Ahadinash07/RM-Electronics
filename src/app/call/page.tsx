@@ -27,9 +27,9 @@ export default function CallPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="text-center p-8">
-        <div className="w-16 h-16 rounded-full bg-[#FF4A17]/20 flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 rounded-full bg-[#8B7CFF]/20 flex items-center justify-center mx-auto mb-4">
           <svg
-            className="h-8 w-8 text-[#FF4A17]"
+            className="h-8 w-8 text-[#6d5ae6]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

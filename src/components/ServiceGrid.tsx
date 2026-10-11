@@ -1,4 +1,5 @@
 import { Wrench, Cpu, Power, Monitor, Settings, Shield, Zap, Home, ArrowRight, Sparkles } from "lucide-react";
+import { SiteLink } from "@/components/SiteLink";
 
 const services = [
   {
@@ -63,7 +64,7 @@ const services = [
 
 export const ServiceGrid = () => {
   return (
-    <section className="pt-4 md:pt-6 pb-12 md:pb-16 bg-surface-soft relative overflow-hidden" id="services">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f8f5ff] via-white to-[#f4f0ff] pb-12 pt-4 md:pb-16 md:pt-6" id="services">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
@@ -92,39 +93,32 @@ export const ServiceGrid = () => {
           {services.map((service) => {
             const Icon = service.icon;
             return (
-              <div
+              <SiteLink
                 key={service.id}
-                className="group relative flex flex-col p-6 bg-white border border-border-light rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+                href="/services"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-border-light bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                {/* Content */}
                 <div className="relative">
-                  <div className="flex items-center justify-between mb-4">
-                    <div
-                      className={`w-14 h-14 rounded-2xl bg-brand-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                    >
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-primary shadow-lg transition-transform duration-300 group-hover:scale-110">
                       <Icon className="h-7 w-7 text-white" />
                     </div>
                     {service.featured && (
-                      <span className="text-xs font-semibold text-brand-accent bg-brand-accent/10 border border-brand-accent/30 px-3 py-1 rounded-full">
+                      <span className="rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-1 text-xs font-semibold text-brand-accent">
                         Popular
                       </span>
                     )}
                   </div>
-                  <h3 className="font-bold text-text-primary text-lg mb-2 group-hover:text-brand-primary transition-colors">
+                  <h3 className="mb-2 text-lg font-bold text-text-primary transition-colors group-hover:text-brand-primary">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-text-muted leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-                  <a
-                    href="/services"
-                    className="inline-flex items-center text-sm font-medium text-brand-primary hover:text-brand-accent transition-colors group/link"
-                  >
+                  <p className="mb-4 text-sm leading-relaxed text-text-muted">{service.description}</p>
+                  <div className="inline-flex items-center text-sm font-medium text-brand-primary transition-colors hover:text-brand-accent group/link">
                     Get Quote
-                    <ArrowRight className="ml-1 h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
-                  </a>
+                    <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                  </div>
                 </div>
-              </div>
+              </SiteLink>
             );
           })}
         </div>

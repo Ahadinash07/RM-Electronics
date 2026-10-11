@@ -7,11 +7,11 @@ import { SiteLink } from "@/components/SiteLink";
 
 export const HeroSection = () => {
   return (
-    <section className="relative flex items-center overflow-hidden bg-white" id="hero">
+    <section className="relative flex items-center overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(139,124,255,0.18),_transparent_30%),linear-gradient(135deg,#f6f1ff_0%,#f3edff_35%,#efe8ff_100%)]" id="hero">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-brand-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">

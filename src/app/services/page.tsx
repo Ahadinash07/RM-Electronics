@@ -70,9 +70,9 @@ export default function ServicesPage() {
       <AnnouncementBar />
       <Navbar />
 
-      <main className="min-h-screen bg-gray-50">
+      <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(139,124,255,0.10),_transparent_30%),linear-gradient(135deg,#f6f1ff_0%,#f9f6ff_100%)]">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-[#1A0F3C] to-[#2D1B69] py-16">
+        <div className="bg-gradient-to-br from-[#07041A] via-[#120a2a] to-[#2a1a61] py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
               Our TV Repair Services
@@ -84,24 +84,24 @@ export default function ServicesPage() {
         </div>
 
         {/* Services Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service) => {
               const Icon = service.icon;
               return (
                 <div
                   key={service.id}
-                  className={`group flex flex-col p-8 bg-white border rounded-xl transition-all duration-200 hover:shadow-lg ${
+                  className={`group flex flex-col p-8 bg-white/80 border rounded-xl transition-all duration-200 hover:shadow-lg backdrop-blur-sm ${
                     service.featured
-                      ? "border-[#FF4A17] shadow-md"
-                      : "border-[#E5E7EB]"
+                      ? "border-[#8B7CFF] shadow-md shadow-[#8B7CFF]/10"
+                      : "border-[#e7ddff]"
                   }`}
                 >
                   <div className="flex items-start gap-4 mb-4">
                     <div
                       className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
                         service.featured
-                          ? "bg-[#FF4A17] text-white"
+                          ? "bg-[#8B7CFF] text-white"
                           : "bg-[#F3F4F6] text-[#1A0F3C]"
                       }`}
                     >
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                         {service.title}
                       </h3>
                       {service.featured && (
-                        <span className="text-xs font-semibold text-[#FF4A17] bg-[#FFF7ED] px-2 py-1 rounded-full inline-block mb-2">
+                        <span className="text-xs font-semibold text-[#6d5ae6] bg-[#f1edff] px-2 py-1 rounded-full inline-block mb-2">
                           Featured Service
                         </span>
                       )}
@@ -126,8 +126,8 @@ export default function ServicesPage() {
                   </p>
                   <div className="mt-auto">
                     <a
-                      href="/"
-                      className="inline-flex items-center text-sm font-medium text-[#FF4A17] hover:text-[#F97316] transition-colors"
+                      href="/contact"
+                      className="inline-flex items-center text-sm font-medium text-[#6d5ae6] hover:text-[#5642d6] transition-colors"
                     >
                       Book This Service
                       <CheckCircle className="ml-1 h-4 w-4" />
@@ -140,7 +140,7 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-[#FF4A17] py-12">
+        <div className="bg-[#8B7CFF] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need TV Repair? Call Now!
@@ -149,8 +149,8 @@ export default function ServicesPage() {
               Get TV repair at your doorstep in Hyderabad
             </p>
             <a
-              href="/call"
-              className="inline-flex items-center gap-2 bg-white text-[#FF4A17] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-[#6d5ae6] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
             >
               <Phone className="h-5 w-5" />
               Call Now

@@ -29,7 +29,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-white" id="how-it-works">
+    <section className="py-12 md:py-16 bg-[linear-gradient(135deg,#f7f3ff_0%,#f0ebff_100%)]" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-4">
@@ -52,10 +52,10 @@ export const ProcessSection = () => {
               return (
                 <div key={step.step} className="relative flex flex-col items-center text-center">
                   <div className="relative z-10 mb-4">
-                    <div className="w-16 h-16 rounded-full bg-white border-4 border-[#FF4A17] flex items-center justify-center shadow-lg">
-                      <Icon className="h-7 w-7 text-[#FF4A17]" />
+                    <div className="w-16 h-16 rounded-full bg-white border-4 border-brand-primary flex items-center justify-center shadow-lg">
+                      <Icon className="h-7 w-7 text-brand-primary" />
                     </div>
-                    <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#FF4A17] text-text-primary text-sm font-bold flex items-center justify-center">
+                    <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-primary text-white text-sm font-bold flex items-center justify-center">
                       {step.step}
                     </span>
                   </div>

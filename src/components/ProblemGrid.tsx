@@ -17,11 +17,11 @@ const problems = [
 
 export const ProblemGrid = () => {
   return (
-    <section className="py-12 md:py-16 bg-surface-soft relative overflow-hidden" id="problems">
+    <section className="py-12 md:py-16 bg-[radial-gradient(circle_at_top_left,_rgba(139,124,255,0.15),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(11,6,24,0.12),_transparent_35%),linear-gradient(135deg,#f5f0ff_0%,#efe8ff_42%,#f9f6ff_100%)] relative overflow-hidden" id="problems">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/12 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/12 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,7 +41,7 @@ export const ProblemGrid = () => {
               <a
                 key={problem.id}
                 href="#quote"
-                className="group flex flex-col p-6 bg-white border border-border-light rounded-2xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col p-6 bg-white/80 border border-[#e7ddff] rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-2xl bg-brand-primary flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon className="h-7 w-7 text-white" />

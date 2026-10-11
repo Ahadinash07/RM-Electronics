@@ -5,10 +5,10 @@ import { trackPhoneClick, trackWhatsAppClick } from "@/lib/gtm";
 
 export const QuoteCTA = () => {
   return (
-    <section className="pt-4 md:pt-6 pb-12 md:pb-16 bg-surface-soft relative overflow-hidden" id="quote">
+    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_center,_rgba(139,124,255,0.12),_transparent_30%),linear-gradient(135deg,#f7f2ff_0%,#f3edff_35%,#f9f7ff_100%)] pb-12 pt-4 md:pb-16 md:pt-6" id="quote">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ export const QuoteCTA = () => {
           </div>
 
           {/* Right Column - CTA Card */}
-          <div className="bg-white border border-border-light rounded-3xl p-8 shadow-2xl">
+          <div className="bg-white/80 border border-[#e7ddff] rounded-3xl p-8 shadow-2xl backdrop-blur-sm">
             <h3 className="text-2xl font-bold text-text-primary mb-2">
               Get Your Free Quote
             </h3>

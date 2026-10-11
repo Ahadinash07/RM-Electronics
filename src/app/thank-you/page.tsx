@@ -57,7 +57,7 @@ export default function ThankYouPage() {
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#FF4A17] text-white flex items-center justify-center flex-shrink-0 font-bold">
+                <div className="w-8 h-8 rounded-full bg-[#8B7CFF] text-white flex items-center justify-center flex-shrink-0 font-bold">
                   1
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function ThankYouPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#FF4A17] text-white flex items-center justify-center flex-shrink-0 font-bold">
+                <div className="w-8 h-8 rounded-full bg-[#8B7CFF] text-white flex items-center justify-center flex-shrink-0 font-bold">
                   2
                 </div>
                 <div>
@@ -83,7 +83,7 @@ export default function ThankYouPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#FF4A17] text-white flex items-center justify-center flex-shrink-0 font-bold">
+                <div className="w-8 h-8 rounded-full bg-[#8B7CFF] text-white flex items-center justify-center flex-shrink-0 font-bold">
                   3
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function ThankYouPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href="/call"
-                  className="flex items-center justify-center gap-2 bg-[#FF4A17] text-white font-semibold px-6 py-4 rounded-lg hover:bg-[#F97316] transition-colors"
+                  className="flex items-center justify-center gap-2 bg-[#8B7CFF] text-white font-semibold px-6 py-4 rounded-lg hover:bg-[#7566ee] transition-colors"
                 >
                   <Phone className="h-5 w-5" />
                   Call Now
@@ -133,9 +133,9 @@ export default function ThankYouPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#FF4A17]/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#8B7CFF]/10 flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="h-8 w-8 text-[#FF4A17]"
+                    className="h-8 w-8 text-[#6d5ae6]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -152,9 +152,9 @@ export default function ThankYouPage() {
                 <p className="text-[#6B7280]">Quick response and repair within 24 hours</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#FF4A17]/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#8B7CFF]/10 flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="h-8 w-8 text-[#FF4A17]"
+                    className="h-8 w-8 text-[#6d5ae6]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -171,9 +171,9 @@ export default function ThankYouPage() {
                 <p className="text-[#6B7280]">All repairs come with warranty coverage</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#FF4A17]/10 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-[#8B7CFF]/10 flex items-center justify-center mx-auto mb-4">
                   <svg
-                    className="h-8 w-8 text-[#FF4A17]"
+                    className="h-8 w-8 text-[#6d5ae6]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -200,7 +200,7 @@ export default function ThankYouPage() {
         </div>
 
         {/* Back to Home CTA */}
-        <div className="bg-[#FF4A17] py-12">
+        <div className="bg-[#8B7CFF] py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Explore Our Services
@@ -210,7 +210,7 @@ export default function ThankYouPage() {
             </p>
             <a
               href="/"
-              className="inline-flex items-center gap-2 bg-white text-[#FF4A17] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-[#6d5ae6] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
             >
               Back to Home
               <ArrowRight className="h-5 w-5" />
