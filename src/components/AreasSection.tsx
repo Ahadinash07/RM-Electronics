@@ -6,9 +6,9 @@ const areas = [
 
 export const AreasSection = () => {
   return (
-    <section className="py-16 bg-[#F9FAFB]" id="areas">
+    <section className="pt-4 md:pt-6 pb-12 md:pb-16 bg-[#F9FAFB]" id="areas">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-4">
             Service Areas in Hyderabad
           </h2>

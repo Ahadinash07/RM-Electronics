@@ -1,4 +1,4 @@
-import { CheckCircle2, MapPin, Wrench, ShieldCheck } from "lucide-react";
+import { CheckCircle2, MapPin, Wrench, ShieldCheck, Clock, Award } from "lucide-react";
 
 export const TrustBar = () => {
   const trustItems = [
@@ -6,46 +6,50 @@ export const TrustBar = () => {
       icon: MapPin,
       title: "Doorstep Service",
       description: "Repair at your home in Hyderabad",
-      accent: "#FF4A17",
+      color: "bg-brand-primary",
     },
     {
       icon: CheckCircle2,
       title: "Transparent Quote",
       description: "Clear pricing before repair starts",
-      accent: "#3B82F6",
+      color: "bg-brand-accent",
     },
     {
       icon: Wrench,
       title: "Experienced Technicians",
       description: "10+ years of TV repair knowledge",
-      accent: "#1A0F3C",
+      color: "bg-brand-primary",
     },
     {
       icon: ShieldCheck,
       title: "90-Day Warranty",
       description: "On all repairs and parts",
-      accent: "#34D399",
+      color: "bg-brand-accent",
     },
   ];
 
   return (
-    <section className="py-10 bg-white border-y border-[#E5E7EB]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+    <section className="py-10 md:py-12 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {trustItems.map((item, index) => {
             const Icon = item.icon;
             return (
               <div key={index} className="flex flex-col items-center text-center group">
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 transition-transform group-hover:scale-105"
-                  style={{ backgroundColor: `${item.accent}15` }}
+                  className={`w-16 h-16 rounded-2xl ${item.color} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300`}
                 >
-                  <Icon className="h-7 w-7" style={{ color: item.accent }} />
+                  <Icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#111827] text-sm sm:text-base">
+                <h3 className="font-bold text-text-primary text-base sm:text-lg mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#6B7280] mt-1">
+                <p className="text-sm text-text-muted">
                   {item.description}
                 </p>
               </div>

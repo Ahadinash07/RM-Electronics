@@ -84,7 +84,7 @@ export const LeadForm = () => {
         urlEncodedData.append("Preference", formData.preference);
         urlEncodedData.append("_subject", "New Lead - RM Electronics (www.rmelectronics.hyd)");
         urlEncodedData.append("_captcha", "false"); // Disables captcha for seamless submission
-        
+
         const response = await fetch("https://formsubmit.co/ajax/rmelectronicshyd@gmail.com", {
           method: "POST",
           headers: {
@@ -93,7 +93,7 @@ export const LeadForm = () => {
           },
           body: urlEncodedData.toString(),
         });
-        
+
         if (response.ok) {
           // Track form submission
           trackFormSubmit({
@@ -148,9 +148,9 @@ export const LeadForm = () => {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-[#374151] mb-1">
+          <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-1 text-left">
             Name *
           </label>
           <input
@@ -159,18 +159,18 @@ export const LeadForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#FF4A17] focus:border-transparent outline-none transition-colors"
+            className="w-full px-4 py-3 bg-white border border-border-light rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors text-text-primary placeholder:text-text-muted"
             placeholder="Your name"
             minLength={2}
             maxLength={60}
           />
           {errors.name && (
-            <p className="text-sm text-[#FF4A17] mt-1">{errors.name}</p>
+            <p className="text-sm text-brand-accent mt-1 text-left">{errors.name}</p>
           )}
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-[#374151] mb-1">
+          <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-1 text-left">
             Phone *
           </label>
           <input
@@ -179,21 +179,21 @@ export const LeadForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#FF4A17] focus:border-transparent outline-none transition-colors"
+            className="w-full px-4 py-3 bg-white border border-border-light rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors text-text-primary placeholder:text-text-muted"
             placeholder="10-digit mobile number (e.g., 9876543210)"
             maxLength={10}
             pattern="[6-9]\d{9}"
             title="Please enter exactly 10 digits, starting with 6, 7, 8, or 9"
           />
           {errors.phone && (
-            <p className="text-sm text-[#FF4A17] mt-1">{errors.phone}</p>
+            <p className="text-sm text-brand-accent mt-1 text-left">{errors.phone}</p>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
         <div>
-          <label htmlFor="issue" className="block text-sm font-medium text-[#374151] mb-1">
+          <label htmlFor="issue" className="block text-sm font-medium text-text-primary mb-1 text-left">
             TV Issue *
           </label>
           <select
@@ -201,7 +201,7 @@ export const LeadForm = () => {
             name="issue"
             value={formData.issue}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#FF4A17] focus:border-transparent outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 bg-white border border-border-light rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors text-text-primary"
           >
             <option value="">Select your issue</option>
             {issues.map((issue) => (
@@ -211,12 +211,12 @@ export const LeadForm = () => {
             ))}
           </select>
           {errors.issue && (
-            <p className="text-sm text-[#FF4A17] mt-1">{errors.issue}</p>
+            <p className="text-sm text-brand-accent mt-1 text-left">{errors.issue}</p>
           )}
         </div>
 
         <div>
-          <label htmlFor="area" className="block text-sm font-medium text-[#374151] mb-1">
+          <label htmlFor="area" className="block text-sm font-medium text-text-primary mb-1 text-left">
             Area
           </label>
           <select
@@ -224,7 +224,7 @@ export const LeadForm = () => {
             name="area"
             value={formData.area}
             onChange={handleChange}
-            className="w-full px-4 py-2 border border-[#E5E7EB] rounded-lg focus:ring-2 focus:ring-[#FF4A17] focus:border-transparent outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 bg-white border border-border-light rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors text-text-primary"
           >
             <option value="">Select area (optional)</option>
             {areas.map((area) => (
@@ -237,10 +237,10 @@ export const LeadForm = () => {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-[#374151] mb-2">
+        <label className="block text-sm font-medium text-text-primary mb-2 text-left">
           Contact Preference
         </label>
-        <div className="flex gap-4">
+        <div className="flex gap-4 text-left">
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="radio"
@@ -248,9 +248,9 @@ export const LeadForm = () => {
               value="call"
               checked={formData.preference === "call"}
               onChange={handleChange}
-              className="text-[#FF4A17]"
+              className="text-brand-primary"
             />
-            <span className="text-sm text-[#374151]">Call</span>
+            <span className="text-sm text-text-secondary">Call</span>
           </label>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -259,35 +259,35 @@ export const LeadForm = () => {
               value="whatsapp"
               checked={formData.preference === "whatsapp"}
               onChange={handleChange}
-              className="text-[#FF4A17]"
+              className="text-brand-primary"
             />
-            <span className="text-sm text-[#374151]">WhatsApp</span>
+            <span className="text-sm text-text-secondary">WhatsApp</span>
           </label>
         </div>
       </div>
 
       <div>
-        <label className="flex items-start gap-2 cursor-pointer">
+        <label className="flex items-start gap-2 cursor-pointer text-left">
           <input
             type="checkbox"
             name="consent"
             checked={formData.consent}
             onChange={handleChange}
-            className="mt-1 text-[#FF4A17]"
+            className="mt-1 text-brand-primary"
           />
-          <span className="text-sm text-[#374151]">
+          <span className="text-sm text-text-secondary">
             I agree to the privacy policy and lead consent *
           </span>
         </label>
         {errors.consent && (
-          <p className="text-sm text-[#FF4A17] mt-1">{errors.consent}</p>
+          <p className="text-sm text-brand-accent mt-1 text-left">{errors.consent}</p>
         )}
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3 bg-[#FF4A17] text-white font-semibold rounded-lg hover:bg-[#F97316] transition-colors shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
+        className="w-full py-3 bg-brand-primary text-white font-semibold rounded-xl hover:bg-brand-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2"
       >
         {isSubmitting ? (
           <>

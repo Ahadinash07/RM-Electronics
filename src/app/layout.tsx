@@ -10,7 +10,9 @@ export const metadata: Metadata = {
   title: "RM Electronics | TV Repair & Service at Your Doorstep in Hyderabad",
   description: "TV Repair & Service !! Doorstep Service in Hyderabad. Get your TV diagnosed and repaired at home with a 90-day warranty.",
   icons: {
-    icon: "/image.png",
+    icon: "/logo.png",
+    shortcut: "/favicon.png",
+    apple: "/logo.png",
   },
   openGraph: {
     title: "RM Electronics | TV Repair & Service in Hyderabad",
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "RM Electronics",
     images: [
       {
-        url: "/RM-Images/Balaji TV Services Storefront.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "RM Electronics TV Repair",
@@ -32,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RM Electronics | TV Repair & Service in Hyderabad",
     description: "TV Repair & Service !! Doorstep Service in Hyderabad. Get your TV diagnosed and repaired at home with a 90-day warranty.",
-    images: ["/RM-Images/Balaji TV Services Storefront.png"],
+    images: ["/logo.png"],
   },
 };
 
