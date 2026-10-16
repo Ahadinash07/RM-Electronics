@@ -1,5 +1,4 @@
-import { AnnouncementBar } from "@/components/AnnouncementBar";
-import { Navbar } from "@/components/Navbar";
+import { SiteLayout } from "@/components/SiteLayout";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustBar } from "@/components/TrustBar";
 import { ProblemGrid } from "@/components/ProblemGrid";
@@ -14,14 +13,10 @@ import { AreasSection } from "@/components/AreasSection";
 import { QuoteCTA } from "@/components/QuoteCTA";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { FinalCTA } from "@/components/FinalCTA";
-import { SiteFooter } from "@/components/SiteFooter";
-import { MobileActionBar } from "@/components/MobileActionBar";
 
 const Index = () => {
   return (
-    <>
-      <AnnouncementBar />
-      <Navbar />
+    <SiteLayout>
       <HeroSection />
       <TrustBar />
       <ProblemGrid />
@@ -36,9 +31,7 @@ const Index = () => {
       <QuoteCTA />
       <FAQAccordion />
       <FinalCTA />
-      <SiteFooter />
-      <MobileActionBar />
-    </>
+    </SiteLayout>
   );
 };
 

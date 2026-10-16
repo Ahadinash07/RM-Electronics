@@ -29,7 +29,7 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-[linear-gradient(135deg,#f7f3ff_0%,#f0ebff_100%)]" id="how-it-works">
+    <section className="py-12 md:py-16 bg-white" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-4">
@@ -43,7 +43,7 @@ export const ProcessSection = () => {
         <div className="relative">
           {/* Desktop Timeline Line */}
           <div className="hidden lg:block absolute top-8 left-0 right-0 h-1 bg-[#E5E7EB]">
-            <div className="absolute top-0 left-0 h-full bg-[#FF4A17] w-1/4"></div>
+            <div className="absolute top-0 left-0 h-full bg-brand-primary w-1/4"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">

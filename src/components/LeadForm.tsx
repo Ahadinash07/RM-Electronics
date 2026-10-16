@@ -22,9 +22,9 @@ export const LeadForm = () => {
   ];
 
   const areas = [
-    "LBNAGAR", "CHINATALKUNTA", "VP", "Banjara Hills", "Hitech City", "Gachibowli", "Madhapur", "Kondapur",
-    "Jubilee Hills", "Kukatpally", "Miyapur", "HITEC City", "Whitefield",
-    "Manikonda", "Narsingi", "Tellapur", "Gopanpally", "Other"
+    "Nagole", "New Nagole", "Mohan Nagar", "Srinagar Colony", "LB Nagar", "Kothapet",
+    "Dilsukhnagar", "Uppal", "Banjara Hills", "Hitech City", "Gachibowli", "Madhapur",
+    "Kondapur", "Jubilee Hills", "Kukatpally", "Miyapur", "Other"
   ];
 
   // Track form start when component mounts
@@ -85,7 +85,7 @@ export const LeadForm = () => {
         urlEncodedData.append("_subject", "New Lead - RM Electronics (www.rmelectronics.hyd)");
         urlEncodedData.append("_captcha", "false"); // Disables captcha for seamless submission
 
-        const response = await fetch("https://formsubmit.co/ajax/rmelectronicshyd@gmail.com", {
+        const response = await fetch("https://formsubmit.co/ajax/electronicsrm74@gmail.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -276,7 +276,17 @@ export const LeadForm = () => {
             className="mt-1 text-brand-primary"
           />
           <span className="text-sm text-text-secondary">
-            I agree to the privacy policy and lead consent *
+            I agree to the{" "}
+            <button
+              type="button"
+              className="text-brand-primary underline"
+              onClick={() => {
+                window.location.href = "/privacy-policy";
+              }}
+            >
+              privacy policy
+            </button>{" "}
+            and lead consent *
           </span>
         </label>
         {errors.consent && (

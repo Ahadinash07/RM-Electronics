@@ -29,10 +29,10 @@ export const TrustBar = () => {
   ];
 
   return (
-    <section className="py-10 md:py-12 bg-[linear-gradient(135deg,#f8f4ff_0%,#f3ebff_38%,#eee7ff_100%)] relative overflow-hidden">
+    <section className="py-10 md:py-12 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/8 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -41,10 +41,10 @@ const reasons = [
 
 export const WhyChooseSection = () => {
   return (
-    <section className="py-12 md:py-16 bg-[radial-gradient(circle_at_top_left,_rgba(139,124,255,0.14),_transparent_30%),linear-gradient(135deg,#f7f3ff_0%,#f0ebff_45%,#f6f2ff_100%)] relative overflow-hidden" id="why-choose">
+    <section className="py-12 md:py-16 bg-surface-soft relative overflow-hidden" id="why-choose">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

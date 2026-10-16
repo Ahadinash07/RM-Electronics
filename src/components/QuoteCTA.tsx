@@ -2,13 +2,15 @@
 
 import { MessageCircle, Phone, CheckCircle2, Sparkles } from "lucide-react";
 import { trackPhoneClick, trackWhatsAppClick } from "@/lib/gtm";
+import { SITE } from "@/lib/site";
+import { SiteLink } from "@/components/SiteLink";
 
 export const QuoteCTA = () => {
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(circle_at_center,_rgba(139,124,255,0.12),_transparent_30%),linear-gradient(135deg,#f7f2ff_0%,#f3edff_35%,#f9f7ff_100%)] pb-12 pt-4 md:pb-16 md:pt-6" id="quote">
+    <section className="pt-4 md:pt-6 pb-12 md:pb-16 bg-surface-soft relative overflow-hidden" id="quote">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +59,7 @@ export const QuoteCTA = () => {
           </div>
 
           {/* Right Column - CTA Card */}
-          <div className="bg-white/80 border border-[#e7ddff] rounded-3xl p-8 shadow-2xl backdrop-blur-sm">
+          <div className="bg-white border border-border-light rounded-3xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-text-primary mb-2">
               Get Your Free Quote
             </h3>
@@ -66,16 +68,16 @@ export const QuoteCTA = () => {
             </p>
 
             <div className="space-y-4">
-              <a
+              <SiteLink
                 href="/call"
                 className="flex items-center justify-center gap-2 w-full py-4 bg-brand-primary text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-brand-primary/25 transition-all duration-300 transform hover:-translate-y-0.5"
                 onClick={() => trackPhoneClick("quote_cta")}
               >
                 <Phone className="h-5 w-5" />
                 <span>Call Now</span>
-              </a>
-              <a
-                href="https://wa.me/917893457190"
+              </SiteLink>
+              <SiteLink
+                href={SITE.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-4 bg-brand-whatsapp text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-brand-whatsapp/25 transition-all duration-300 transform hover:-translate-y-0.5"
@@ -83,7 +85,7 @@ export const QuoteCTA = () => {
               >
                 <MessageCircle className="h-5 w-5" />
                 <span>WhatsApp Us</span>
-              </a>
+              </SiteLink>
             </div>
           </div>
         </div>

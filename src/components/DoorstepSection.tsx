@@ -38,7 +38,7 @@ export const DoorstepSection = () => {
                     Doorstep Service
                   </p>
                   <p className="text-xs text-text-secondary">
-                    Available in LBNAGAR, CHINATALKUNTA & VP
+                    Available from Nagole, Hyderabad
                   </p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ export const DoorstepSection = () => {
               Service at Your Doorstep
             </h2>
             <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-              Skip the hassle of transporting your TV to a service center. Our technicians come to your home in LBNAGAR, CHINATALKUNTA & VP, diagnose the issue, and repair it on the spot.
+              Skip the hassle of transporting your TV to a service center. Our technicians come to your home from Nagole, Hyderabad, diagnose the issue, and repair it on the spot.
             </p>
 
             <div className="space-y-6">
@@ -93,7 +93,7 @@ export const DoorstepSection = () => {
                 <div>
                   <h3 className="font-bold text-text-primary text-lg mb-1">Coverage in Hyderabad</h3>
                   <p className="text-sm text-text-secondary">
-                    We service LBNAGAR, CHINATALKUNTA, VP and other areas across Hyderabad.
+                    We service Nagole, New Nagole, Mohan Nagar, and other areas across Hyderabad.
                   </p>
                 </div>
               </div>

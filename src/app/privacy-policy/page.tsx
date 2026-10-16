@@ -1,14 +1,9 @@
-import { Navbar } from "@/components/Navbar";
-import { SiteFooter } from "@/components/SiteFooter";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { SiteLayout } from "@/components/SiteLayout";
 
 export default function PrivacyPolicy() {
   return (
-    <>
-      <AnnouncementBar />
-      <Navbar />
-
-      <main className="min-h-screen bg-gray-50 py-16">
+    <SiteLayout>
+      <main className="min-h-screen bg-surface-soft py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-100">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8 border-b pb-4">Privacy Policy</h1>
 
@@ -64,14 +59,14 @@ export default function PrivacyPolicy() {
               <p>
                 If you have any questions about this Privacy Policy, please contact us at:<br />
                 <strong>Phone:</strong> +91 7893457190<br />
-                <strong>Email:</strong> rmelectronicshyd@gmail.com
+                <strong>Email:</strong> electronicsrm74@gmail.com<br />
+                <strong>Address:</strong> 1-1-154/5, Mohan Nagar, New Nagole, Srinagar Colony, Nagole, Hyderabad, Telangana 500102
               </p>
             </section>
           </div>
         </div>
       </main>
 
-      <SiteFooter />
-    </>
+    </SiteLayout>
   );
 }

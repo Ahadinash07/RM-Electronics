@@ -34,7 +34,7 @@ const faqs = [
  },
  {
   question: "How do I book a service?",
-  answer: "You can book by calling us at +91 7893457190 or sending a WhatsApp message. Our team will confirm the appointment and technician visit time.",
+  answer: "You can book by calling us at +91 7893457190, emailing electronicsrm74@gmail.com, or sending a WhatsApp message. We are open Mon-Sun, 10AM - 9PM from our Nagole workshop.",
  },
 ];
 

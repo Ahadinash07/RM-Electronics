@@ -1,10 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import { Navbar } from "@/components/Navbar";
-import { SiteFooter } from "@/components/SiteFooter";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { CheckCircle, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { trackConversion, trackPageView } from "@/lib/gtm";
+import { SiteLayout } from "@/components/SiteLayout";
+import { SiteLink } from "@/components/SiteLink";
+import { SITE } from "@/lib/site";
 
 export default function ThankYouPage() {
   useEffect(() => {
@@ -29,11 +29,8 @@ export default function ThankYouPage() {
     */
   }, []);
   return (
-    <>
-      <AnnouncementBar />
-      <Navbar />
-
-      <main className="min-h-screen bg-gray-50">
+    <SiteLayout>
+      <main className="min-h-screen bg-surface-soft">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-[#1A0F3C] to-[#2D1B69] py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -102,22 +99,22 @@ export default function ThankYouPage() {
                 Need Immediate Assistance?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <a
+                <SiteLink
                   href="/call"
-                  className="flex items-center justify-center gap-2 bg-[#8B7CFF] text-white font-semibold px-6 py-4 rounded-lg hover:bg-[#7566ee] transition-colors"
+                  className="flex items-center justify-center gap-2 bg-brand-primary text-white font-semibold px-6 py-4 rounded-lg hover:bg-brand-primary/90 transition-colors"
                 >
                   <Phone className="h-5 w-5" />
                   Call Now
-                </a>
-                <a
-                  href="https://wa.me/917893457190"
+                </SiteLink>
+                <SiteLink
+                  href={SITE.whatsapp}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-4 rounded-lg hover:bg-[#1db954] transition-colors"
+                  className="flex items-center justify-center gap-2 bg-brand-whatsapp text-white font-semibold px-6 py-4 rounded-lg hover:opacity-90 transition-colors"
                 >
                   <MessageCircle className="h-5 w-5" />
                   WhatsApp
-                </a>
+                </SiteLink>
               </div>
             </div>
           </div>
@@ -208,18 +205,16 @@ export default function ThankYouPage() {
             <p className="text-white/90 mb-6 text-lg">
               Learn more about our comprehensive TV repair services
             </p>
-            <a
+            <SiteLink
               href="/"
-              className="inline-flex items-center gap-2 bg-white text-[#6d5ae6] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-brand-primary font-semibold px-8 py-4 rounded-lg hover:bg-surface-soft transition-colors"
             >
               Back to Home
               <ArrowRight className="h-5 w-5" />
-            </a>
+            </SiteLink>
           </div>
         </div>
       </main>
-
-      <SiteFooter />
-    </>
+    </SiteLayout>
   );
 }

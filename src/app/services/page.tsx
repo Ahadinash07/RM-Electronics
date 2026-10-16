@@ -1,6 +1,6 @@
-import { Navbar } from "@/components/Navbar";
-import { SiteFooter } from "@/components/SiteFooter";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { SiteLayout } from "@/components/SiteLayout";
+import { SiteLink } from "@/components/SiteLink";
+import { SITE } from "@/lib/site";
 import { Wrench, Cpu, Power, Monitor, Settings, Shield, Zap, Home, Phone, CheckCircle } from "lucide-react";
 
 const services = [
@@ -66,72 +66,55 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <>
-      <AnnouncementBar />
-      <Navbar />
-
-      <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(139,124,255,0.10),_transparent_30%),linear-gradient(135deg,#f6f1ff_0%,#f9f6ff_100%)]">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-[#07041A] via-[#120a2a] to-[#2a1a61] py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-              Our TV Repair Services
-            </h1>
-            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+    <SiteLayout>
+      <main className="min-h-screen bg-surface-soft">
+        <div className="bg-gradient-to-br from-brand-secondary via-brand-navy to-primary-800 py-16">
+          <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+            <h1 className="mb-4 text-4xl font-bold text-white sm:text-5xl">Our TV Repair Services</h1>
+            <p className="mx-auto max-w-2xl text-xl text-white/80">
               Component-level repairs with genuine parts and 90-day warranty on all work.
             </p>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((service) => {
               const Icon = service.icon;
               return (
                 <div
                   key={service.id}
-                  className={`group flex flex-col p-8 bg-white/80 border rounded-xl transition-all duration-200 hover:shadow-lg backdrop-blur-sm ${
-                    service.featured
-                      ? "border-[#8B7CFF] shadow-md shadow-[#8B7CFF]/10"
-                      : "border-[#e7ddff]"
+                  className={`group flex flex-col rounded-2xl border bg-white p-8 transition-all duration-200 hover:shadow-lg ${
+                    service.featured ? "border-brand-primary shadow-md shadow-brand-primary/10" : "border-border-light"
                   }`}
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="mb-4 flex items-start gap-4">
                     <div
-                      className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${
-                        service.featured
-                          ? "bg-[#8B7CFF] text-white"
-                          : "bg-[#F3F4F6] text-[#1A0F3C]"
+                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${
+                        service.featured ? "bg-brand-primary text-white" : "bg-surface-muted text-brand-secondary"
                       }`}
                     >
                       <Icon className="h-7 w-7" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-[#111827] text-xl mb-2">
-                        {service.title}
-                      </h3>
+                      <h3 className="mb-2 text-xl font-bold text-text-primary">{service.title}</h3>
                       {service.featured && (
-                        <span className="text-xs font-semibold text-[#6d5ae6] bg-[#f1edff] px-2 py-1 rounded-full inline-block mb-2">
+                        <span className="mb-2 inline-block rounded-full bg-brand-primary/10 px-2 py-1 text-xs font-semibold text-brand-primary">
                           Featured Service
                         </span>
                       )}
                     </div>
                   </div>
-                  <p className="text-sm text-[#6B7280] leading-relaxed mb-4">
-                    {service.description}
-                  </p>
-                  <p className="text-sm text-[#374151] leading-relaxed mb-6">
-                    {service.details}
-                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-text-muted">{service.description}</p>
+                  <p className="mb-6 text-sm leading-relaxed text-text-secondary">{service.details}</p>
                   <div className="mt-auto">
-                    <a
+                    <SiteLink
                       href="/contact"
-                      className="inline-flex items-center text-sm font-medium text-[#6d5ae6] hover:text-[#5642d6] transition-colors"
+                      className="inline-flex items-center text-sm font-medium text-brand-primary hover:text-primary-700"
                     >
                       Book This Service
                       <CheckCircle className="ml-1 h-4 w-4" />
-                    </a>
+                    </SiteLink>
                   </div>
                 </div>
               );
@@ -139,27 +122,22 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="bg-[#8B7CFF] py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Need TV Repair? Call Now!
-            </h2>
-            <p className="text-white/90 mb-6 text-lg">
-              Get TV repair at your doorstep in Hyderabad
+        <div className="bg-brand-primary py-12">
+          <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+            <h2 className="mb-4 text-3xl font-bold text-white">Need TV Repair? Call Now!</h2>
+            <p className="mb-6 text-lg text-white/90">
+              Doorstep service from {SITE.areaPrimary}. {SITE.hours}
             </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-white text-[#6d5ae6] font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors"
+            <SiteLink
+              href="/call"
+              className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-semibold text-brand-primary hover:bg-surface-soft"
             >
               <Phone className="h-5 w-5" />
-              Call Now
-            </a>
+              Call {SITE.phoneDisplay}
+            </SiteLink>
           </div>
         </div>
       </main>
-
-      <SiteFooter />
-    </>
+    </SiteLayout>
   );
 }
